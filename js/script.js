@@ -42,26 +42,23 @@ const timer = setTimeout(function () {
 
 //4-chiedo all' utente per 5 volte di inserire i numeri da 1-99
 //creo una variabile d'appoggio per inserire il risultato 
-let result;
-let quest
-
+ let quest = []
+ let result = []
 const userNuber = setTimeout(function () {
     for (let i = 0; i <= 4; i++) {
-         quest = parseInt(prompt(`inserisci un numero da ${min} a ${max}`))
-        console.log(quest[i])
+        let userInpout = parseInt(prompt(`inserisci un numero da ${min} a ${max}`))
+         quest.push(userInpout)
+        console.log(quest)
     }
-    if (quest === randomNuber) { 
-        result = 5
-    } else{
-         myAlert = alert("Hai indovinato" + result[i] + "numeri")
-
-    }
-
-    
-
-   
-
+    for(let j = 0; j < quest.length; j++){
+        if (num.includes(quest[j])) { 
+            result.push(quest[j])
+        }
+    }   
+     alert( 'hai indovinato i numeri' +  result)
 }, 5100)
+
+
 
 
 
